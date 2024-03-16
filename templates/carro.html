@@ -6,20 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O carro do ano</title>
     <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <h1>Informações:</h1>
-
-        <p>O modelo do carro é:</p>
-        <h3>{{modelo}}</h3>
-
-        <p>A marca do carro é:</p>
-        <h3>{{marca}}</h3>
-
-        <p>O ano do carro é:</p>
-        <h3>{{ano}}</h3>
+        {% for carro in c %}
+        <div class="card">
+            <strong>Marca:</strong> {{ carro.marca }}<br>
+            <strong>Modelo:</strong> {{ carro.modelo }}<br>
+            <strong>Ano:</strong> {{ carro.ano }}<br>
+            <strong>Cor:</strong> {{ carro.cor }}<br>
+        </div>
+        {% endfor %}
     </div>
 </body>
 

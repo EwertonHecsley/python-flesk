@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from dicionario.carro import carro
+from dicionario.carro import lista_carros
 
 app = Flask(__name__)
 
@@ -13,8 +13,7 @@ def about():
 
 @app.route('/carro')
 def mostra_carro():
-    return render_template('carro.html',**carro)
+    return render_template('carro.html', c=lista_carros)
 
-
-app.run(debug=True)
-
+if __name__ == "__main__":
+    app.run(debug=True)

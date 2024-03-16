@@ -1,5 +1,20 @@
-carro = {
-    "marca": "Ford",
-    "modelo": "Mustang",
-    "ano": 2024
-}
+lista_carros = [
+    {
+        "marca":"Ford",
+        "modelo":"Mustang",
+        "ano":2018,
+        "cor":"Verde"
+    },
+    {
+        "marca":"GM",
+        "modelo":"Tracker",
+        "ano":2024,
+        "cor":"Branca"
+    },
+    {
+        "marca":"Volkswagen",
+        "modelo":"Jetta",
+        "ano":2019,
+        "cor":"Preto"
+    }
+]
